@@ -24,7 +24,9 @@
         <datasource-mapping>
           <factory-entry name="addresspu" />
           <factory-entry name="departmentpu" />
+          <factory-entry name="rolepu" />
           <factory-entry name="userpu" />
+          <factory-entry name="useruserpu" />
         </datasource-mapping>
         <naming-strategy-map />
         <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/META-INF/persistence.xml" />
