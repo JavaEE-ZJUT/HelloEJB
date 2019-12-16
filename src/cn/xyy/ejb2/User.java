@@ -17,22 +17,6 @@ import javax.persistence.Table;
 
 public class User implements Serializable {
 
-//    @Id
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
-//    @Column(name = "s_id")
-//    private Long sId;
-//    @Column(name = "s_name")
-//    private String sName;
-//
-//    /**
-//     * 多个学生对应一个老师
-//     * 注解形式配置多对一
-//     *  1,配置表关系
-//     *  2,配置外键
-//     */
-//    @ManyToOne(targetEntity = Teacher.class)
-//    @JoinColumn(name = "s_t_id",referencedColumnName = "t_id")
-//    private Teacher teacher;
 
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -51,12 +35,6 @@ public class User implements Serializable {
     @ManyToOne(targetEntity = Department.class,cascade=CascadeType.ALL,optional=false)
     @JoinColumn(name = "departmentid",referencedColumnName = "departmentid")
     private Department department;
-
-//    @ManyToOne(cascade=CascadeType.ALL,optional=false)
-//    @JoinColumn(name="departmentid")
-//    /*此类型与Department为“多对一关联”，通过@ManyToOne注解指名。通过departmentid字段中（外键）与Department相关联。 */
-
-
 
     public Department getDepartment() { return department; }
     public void setDepartment(Department department) { this.department = department; }

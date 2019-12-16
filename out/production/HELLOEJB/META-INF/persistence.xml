@@ -11,6 +11,28 @@
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect" />
             <property name="hibernate.show_sql" value="true" />
             <property name="hibernate.format_sql" value="true" />
+            <property name="hibernate.hbm2ddl.auto" value="none" />
+        </properties>
+    </persistence-unit>
+    <persistence-unit name="departmentpu">
+        <jta-data-source>java:/MySqlDS</jta-data-source>
+        <class>cn.xyy.ejb2.Department</class>
+        <properties>
+            <property name="hibernate.connection.autocommit" value="false" />
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect" />
+            <property name="hibernate.show_sql" value="true" />
+            <property name="hibernate.format_sql" value="true" />
+            <property name="hibernate.hbm2ddl.auto" value="update" />
+        </properties>
+    </persistence-unit>
+    <persistence-unit name="addresspu">
+        <jta-data-source>java:/MySqlDS</jta-data-source>
+        <class>cn.xyy.ejb3.Address</class>
+        <properties>
+            <property name="hibernate.connection.autocommit" value="false" />
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect" />
+            <property name="hibernate.show_sql" value="true" />
+            <property name="hibernate.format_sql" value="true" />
             <property name="hibernate.hbm2ddl.auto" value="update" />
         </properties>
     </persistence-unit>

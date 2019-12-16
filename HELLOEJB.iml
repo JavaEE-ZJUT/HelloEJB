@@ -22,6 +22,7 @@
       <configuration>
         <setting name="validation-enabled" value="true" />
         <datasource-mapping>
+          <factory-entry name="addresspu" />
           <factory-entry name="departmentpu" />
           <factory-entry name="userpu" />
         </datasource-mapping>
